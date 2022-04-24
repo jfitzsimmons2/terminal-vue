@@ -1,0 +1,6 @@
+{
+    "name": "button",
+    "main": "dist/button.cjs.js",
+    "module": "dist/button.es.js",
+    "unpkg": "dist/button.iife.js"
+}

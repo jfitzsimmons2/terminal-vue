@@ -1,0 +1,6 @@
+{
+    "name": "navigation",
+    "main": "dist/navigation.cjs.js",
+    "module": "dist/navigation.es.js",
+    "unpkg": "dist/navigation.iife.js"
+}
