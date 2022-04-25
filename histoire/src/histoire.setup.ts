@@ -1,4 +1,4 @@
-import 'terminal.css'
+import './terminal.css'
 import './terminal-custom.css';
 
 //import '../../components/navigation/dist/style.css'

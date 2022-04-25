@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
 
+:root {
+  --font-stack: 'Fira Code', monospace;
+  --global-font-size: 14px;
+}
+
 #app {
-  font-family: 'Fira Code', monospace;
+  font-family: var(--font-stack);
+  
 }
 
 .terminal-card>header {
@@ -12,6 +18,14 @@
 
 .terminal-card>header.collapsable {
   cursor: pointer;
+}
+
+.terminal-card p:last-child {
+  margin-bottom: 0;
+}
+
+.terminal-card>header.collapsable:hover {
+  background-color: black;
 }
 
 .text-left {
