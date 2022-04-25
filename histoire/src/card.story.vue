@@ -17,10 +17,9 @@ function initState() {
       :init-state="initState"
     >
       <template #default="{ state }">
-        <Card :header-align="state.headerAlign" :collapsable="state.collapsable" />
+        <Card :collapsable="state.collapsable" />
       </template>
       <template #controls="{state}">
-        <HstText title="headerAlign" v-model="state.headerAlign" />
         <HstCheckbox title="collapsable" v-model="state.collapsable" />
       </template>
     </Variant>
