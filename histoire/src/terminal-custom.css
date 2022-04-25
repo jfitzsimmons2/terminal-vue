@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
+#app {
+  font-family: 'Fira Code', monospace;
+}
+
+.terminal-card>header {
+  padding: var(--global-space);
+  display: flex;
+  justify-content: space-between;
+}
+
+.terminal-card>header.collapsable {
+  cursor: pointer;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}

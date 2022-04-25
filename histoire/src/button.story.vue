@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Button from "../../components/button";
+import Button from "../../components/button/button.vue";
 
 const buttonClasses = [
   "btn-default",

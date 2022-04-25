@@ -1,0 +1,6 @@
+{
+  "name": "card",
+  "main": "dist/card.cjs.js",
+  "module": "dist/card.es.js",
+  "unpkg": "dist/card.iife.js"
+}

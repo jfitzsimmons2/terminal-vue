@@ -5,8 +5,6 @@ export default {
 </script>
 
 <script setup lang="ts">
-import "terminal.css";
-
 const props = defineProps<{
   logoText: string;
   menuItems: Array<object>;
