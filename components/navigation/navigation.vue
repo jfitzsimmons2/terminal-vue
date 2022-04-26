@@ -7,7 +7,7 @@ export default {
 <script setup lang="ts">
 const props = defineProps<{
   logoText: string;
-  menuItems: Array<object>;
+  menuItems: Array<any>;
 }>();
 </script>
 
@@ -24,7 +24,7 @@ const props = defineProps<{
       <slot name="menu">
         <ul>
           <li v-for="menuItem in menuItems">
-            <a class="menu-item" href="#">Item #1</a>
+            <a class="menu-item" :href="menuItem.path">{{menuItem.name}}</a>
           </li>
         </ul>
       </slot>

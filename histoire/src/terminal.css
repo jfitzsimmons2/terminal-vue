@@ -18,7 +18,8 @@
   --display-h1-decoration: none;
 }
 
-.dark {
+.dark,
+.htw-dark {
   --global-font-size: 15px;
   --global-line-height: 1.4em;
   --global-space: 10px;
@@ -98,13 +99,6 @@ em {
 
 blockquote,
 code,
-em,
-strong {
-  
-}
-
-blockquote,
-code,
 footer,
 h1,
 h2,
@@ -119,7 +113,6 @@ p,
 section,
 ul,
 .logo {
-  float: none;
   margin: 0;
   padding: 0;
 }

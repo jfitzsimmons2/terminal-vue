@@ -1,22 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap");
 
 :root {
-  --font-stack: 'Fira Code', monospace;
+  --font-stack: "Fira Code", monospace;
   --global-font-size: 14px;
 }
 
 #app {
   font-family: var(--font-stack);
-  
 }
 
-.terminal-card>header {
+.terminal-card > header {
   padding: var(--global-space);
   display: flex;
   justify-content: space-between;
 }
 
-.terminal-card>header.collapsable {
+.terminal-card > header.collapsable {
   cursor: pointer;
 }
 
@@ -24,8 +23,14 @@
   margin-bottom: 0;
 }
 
-.terminal-card>header.collapsable:hover {
-  background-color: black;
+.terminal-card > header.collapsable:hover {
+  color: black;
+}
+
+table.border tr,
+table.border td,
+table.border th {
+  border: 0;
 }
 
 .text-left {
