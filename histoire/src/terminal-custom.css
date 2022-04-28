@@ -5,66 +5,8 @@
   --global-font-size: 14px;
 }
 
-#app {
+#app,body,html {
   font-family: var(--font-stack);
+  background-color: var(--background-color);
 }
 
-.terminal-card > header {
-  padding: var(--global-space);
-  display: flex;
-  justify-content: space-between;
-}
-
-.terminal-card > header.collapsable {
-  cursor: pointer;
-}
-
-.terminal-card p:last-child {
-  margin-bottom: 0;
-}
-
-.terminal-card > header.collapsable:hover {
-  background-color: black;
-  color: white;
-}
-
-.tab-buttons button {
-  padding-left: var(--global-space);
-  padding-right: var(--global-space);
-  border-right: 0;
-  border-bottom: 0;
-}
-
-.tab-buttons .active {
-  background-color: var(--font-color);
-  color: var(--background-color);
-}
-
-.tab-buttons .active:active,
-.tab-buttons .active:hover,
-.tab-buttons .active:focus {
-  background-color: var(--font-color);
-  color: var(--background-color);
-}
-
-.tab-buttons button:last-child {
-  border-right: 1px solid;
-}
-
-table.border tr,
-table.border td,
-table.border th {
-  border: 0;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}

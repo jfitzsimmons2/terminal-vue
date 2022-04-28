@@ -6,7 +6,7 @@
         v-for="(tab, i) in tabs"
         class="btn-default btn-ghost"
         :class="{ active: props.activeIndex == i }"
-        >{{ tab.props.heading }}</Button
+        >{{ tab.props?.heading }}</Button
       >
     </div>
     <div class="tab-panels">
