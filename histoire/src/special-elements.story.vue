@@ -2,12 +2,18 @@
 function initState() {
   return {};
 }
+const initState2 = () => {
+  return {
+    test: "test",
+  };
+};
 </script>
 
 <template>
   <Story title="Special elements">
-    <Variant title="playground" :init-state="initState">
+    <Variant title="playground" :init-state="initState2">
       <template #default="{ state }">
+        {{ state.test }}
         <blockquote>
           <p>
             <em>This is a properly formatted blockquote, btw.</em> Measuring
@@ -29,7 +35,7 @@ function initState() {
         </address>
       </template>
       <template #controls="{ state }">
-        <HstText title="logoText" v-model="state.logoText" />
+        <HstText title="test" v-model="state.test" />
       </template>
     </Variant>
     <Variant title="terminal prompt" :init-state="initState">

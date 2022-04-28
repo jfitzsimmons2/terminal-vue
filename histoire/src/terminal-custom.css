@@ -24,7 +24,31 @@
 }
 
 .terminal-card > header.collapsable:hover {
-  color: black;
+  background-color: black;
+  color: white;
+}
+
+.tab-buttons button {
+  padding-left: var(--global-space);
+  padding-right: var(--global-space);
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.tab-buttons .active {
+  background-color: var(--font-color);
+  color: var(--background-color);
+}
+
+.tab-buttons .active:active,
+.tab-buttons .active:hover,
+.tab-buttons .active:focus {
+  background-color: var(--font-color);
+  color: var(--background-color);
+}
+
+.tab-buttons button:last-child {
+  border-right: 1px solid;
 }
 
 table.border tr,

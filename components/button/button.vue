@@ -1,5 +1,5 @@
 <template>
-  <button class="btn" v-bind="{ ...attrs }"><slot></slot></button>
+  <button class="btn"><slot></slot></button>
 </template>
 
 <script lang="ts">

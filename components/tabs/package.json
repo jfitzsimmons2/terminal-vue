@@ -1,0 +1,6 @@
+{
+    "name": "tabs",
+    "main": "dist/tabs.cjs.js",
+    "module": "dist/tabs.es.js",
+    "unpkg": "dist/tabs.iife.js"
+}
