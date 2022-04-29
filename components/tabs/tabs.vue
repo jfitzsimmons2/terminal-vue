@@ -40,15 +40,15 @@ const props = withDefaults(
 );
 
 const tabs = computed(() => {
-  return slots.default();
+  return slots.default?.();
 });
 
-const getKey = (tab, i) => {
+const getKey = (tab: any, i: number) => {
   return tab.props && tab.props.header ? tab.props.header : i;
 };
 
 onMounted(() => {
-  console.log(slots.default());
+  console.log(slots.default?.());
 });
 </script>
 
