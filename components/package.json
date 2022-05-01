@@ -1,10 +1,16 @@
 {
-  "name": "components",
+  "name": "@jfitzsimmons2/components",
   "packageManager": "yarn@3.2.0",
   "devDependencies": {
+    "@iconify/vue": "^3.2.1",
     "glob": "^8.0.1",
+    "sass": "^1.51.0",
     "vite": "^2.9.5",
     "vue": "^3.2.33"
+  },
+  "scripts": {
+    "css:build": "sass style/style.scss style/dist/style.css --style=compressed",
+    "css:watch": "sass style/style.scss style/dist/style.css --style=compressed --watch"
   },
   "dependencies": {
     "@vitejs/plugin-vue": "^2.3.1",

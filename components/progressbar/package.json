@@ -1,0 +1,6 @@
+{
+    "name": "progressbar",
+    "main": "dist/progressbar.cjs.js",
+    "module": "dist/progressbar.es.js",
+    "unpkg": "dist/progressbar.iife.js"
+}
