@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import ProgressBar from "../../components/progress-bar/progress-bar.vue";
+import ProgressBar from "../../components/progressbar/progressbar.vue";
 
 function initState() {
   return {

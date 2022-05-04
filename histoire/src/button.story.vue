@@ -31,7 +31,10 @@ function initState() {
       :init-state="initState"
     >
       <template #default="{ state }">
-        <Button :class="btnClass">Click me</Button>
+        <Button :icon="state.icon" :class="btnClass">Click me</Button>
+      </template>
+      <template #controls="{ state }">
+        <HstText title="icon" v-model="state.icon" />
       </template>
     </Variant>
   </Story>
