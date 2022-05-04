@@ -4,7 +4,7 @@
       <Button
         @click="$emit('update:activeIndex', i)"
         v-for="(tab, i) in tabs"
-        class="btn-default btn-ghost"
+        class="btn-default"
         :class="{ active: props.activeIndex == i }"
         >{{ tab.props?.heading }}</Button
       >
