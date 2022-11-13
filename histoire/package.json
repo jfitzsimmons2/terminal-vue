@@ -1,6 +1,5 @@
 {
   "name": "histoire",
-  "packageManager": "yarn@3.2.0",
   "scripts": {
     "story:dev": "histoire dev",
     "story:build": "histoire build"
