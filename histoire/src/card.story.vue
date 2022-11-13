@@ -1,25 +1,18 @@
 <script lang="ts" setup>
+import { reactive } from "vue";
 import Card from "../../components/card/card.vue";
 
-function initState() {
-  return {
-    headerAlign: "center",
-    collapsable: false
-  };
-}
+const state = reactive({
+  headerAlign: "center",
+  collapsable: false
+});
 </script>
 
 <template>
-  <Story
-    title="Card"
-  >
-    <Variant
-      :init-state="initState"
-    >
-      <template #default="{ state }">
-        <Card :collapsable="state.collapsable" />
-      </template>
-      <template #controls="{state}">
+  <Story title="Card">
+    <Variant>
+      <Card :collapsable="state.collapsable" />
+      <template #controls>
         <HstCheckbox title="collapsable" v-model="state.collapsable" />
       </template>
     </Variant>

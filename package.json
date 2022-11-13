@@ -1,8 +1,11 @@
 {
-  "name": "terminal-vue",
-  "packageManager": "yarn@3.2.0",
-  "workspaces": [
-    "./components",
-    "histoire"
-  ]
+	"name": "terminal-vue",
+	"packageManager": "yarn@3.2.0",
+	"workspaces": [
+		"./components",
+		"histoire"
+	],
+	"scripts": {
+		"histoire:build": "pnpm -w histoire story:build"
+	}
 }
