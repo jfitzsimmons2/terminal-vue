@@ -1,2 +1,5 @@
 [build]
   command = "pnpm --filter histoire story:build"
+
+[build.environment]
+  NPM_FLAGS="--prefix=/"
