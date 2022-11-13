@@ -15,11 +15,7 @@ function initState() {
         <ProgressBar v-model="state.percent"></ProgressBar>
       </template>
       <template #controls="{ state }">
-        <HstNumber
-          title="percent"
-          v-model.number="state.percent"
-          type="number"
-        />
+        <HstNumber title="percent" v-model.number="state.percent" type="number" />
       </template>
     </Variant>
     <Variant title="loading demo">
@@ -28,11 +24,7 @@ function initState() {
         <ProgressBar v-model="state.percent"></ProgressBar>
       </template>
       <template #controls="{ state }">
-        <HstNumber
-          title="percent"
-          v-model.number="state.percent"
-          type="number"
-        />
+        <HstNumber title="percent" v-model.number="state.percent" type="number" />
       </template>
     </Variant>
   </Story>
