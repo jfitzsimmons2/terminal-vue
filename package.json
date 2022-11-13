@@ -5,7 +5,8 @@
 		"histoire"
 	],
 	"scripts": {
-		"histoire:build": "pnpm -w histoire story:build"
+		"histoire:dev": "pnpm run --filter histoire story:dev",
+		"histoire:build": "pnpm run --filter histoire story:build"
 	},
 	"devDependencies": {
 		"pnpm": "3"

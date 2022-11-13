@@ -1,20 +1,26 @@
 <template>
-  <div class="tabs" role="tablist">
+  <div class="tabs" role="tablist" ref="tablist">
     <div class="tab-buttons">
       <Button
-        @click="$emit('update:activeIndex', i)"
         v-for="(tab, i) in tabs"
+        @click="$emit('update:modelValue', i)"
+        :id="`tab${id}${i}`"
         class="btn-default"
-        :class="{ active: props.activeIndex == i }"
+        :class="{ active: modelValue == i }"
+        role="tab"
+        aria-selected="true"
+        :aria-controls="`tab-panel_${id}_${i}`"
         >{{ tab.props?.heading }}</Button
       >
     </div>
     <div class="tab-panels">
-      <template v-for="(tab, i) of tabs" :key="getKey(tab, i)">
+      <template v-for="(tab, i) of tabs" :key="`tab-panel_${id}_${i}`">
         <div
           class="terminal-card"
           role="tabpanel"
-          v-show="props.activeIndex === i"
+          :aria-labelledby="`tab${id}${i}`"
+          :id="`tab-panel_${id}_${i}`"
+          v-show="modelValue === i"
         >
           <div>
             <component :is="tab"></component>
@@ -26,30 +32,64 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, useSlots } from "vue";
+import { computed, onMounted, ref, useSlots } from "vue";
 import Button from "../button/button.vue";
+import { TabsManual } from "./TabsManual";
+import componentID from "../utils/unique-component-id";
 
-const slots = useSlots();
 const props = withDefaults(
   defineProps<{
-    activeIndex: number;
+    modelValue: number;
   }>(),
   {
-    activeIndex: 0,
+    modelValue: 0,
   }
 );
+
+defineEmits(["update:modelValue"]);
+
+const tablist = ref();
+const id = "tablist_" + componentID();
+
+console.log(id);
+
+onMounted(() => {
+  new TabsManual(tablist.value);
+});
+
+const slots = useSlots();
 
 const tabs = computed(() => {
   return slots.default?.();
 });
 
-const getKey = (tab: any, i: number) => {
-  return tab.props && tab.props.header ? tab.props.header : i;
-};
-
-onMounted(() => {
-  console.log(slots.default?.());
-});
+console.log(tabs);
 </script>
 
-<style scoped></style>
+<style lang="scss">
+.tab-buttons button.btn {
+  padding-left: var(--global-space);
+  padding-right: var(--global-space);
+  border: 0;
+  margin-right: 0.25rem;
+}
+
+.tab-buttons button {
+  background-color: var(--font-color);
+  color: var(--invert-font-color);
+}
+
+.tabs .terminal-card {
+  border: none;
+}
+
+.tab-buttons button.active {
+  background-color: var(--invert-font-color);
+  color: var(--font-color);
+}
+.tab-buttons button:active,
+.tab-buttons button:focus {
+  outline: 1px dashed lime;
+  outline-offset: 1px;
+}
+</style>

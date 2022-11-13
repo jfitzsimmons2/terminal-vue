@@ -231,20 +231,6 @@ pre code {
   color: white;
 }
 
-.tab-buttons button {
-  padding-left: var(--global-space);
-  padding-right: var(--global-space);
-  border: 0;
-}
-
-.tab-buttons .active,
-.tab-buttons .active:active,
-.tab-buttons .active:hover,
-.tab-buttons .active:focus {
-  background-color: black;
-  color: var(--primary-color);
-}
-
 table.border tr,
 table.border td,
 table.border th {
