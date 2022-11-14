@@ -1,7 +1,8 @@
 <template>
     <slot>
         <div class="form-group">
-            <input :type="props.type" />
+            <label :for="id">{{ props.label }}</label>
+            <input :id="id" v-bind="attrs" :type="props.type" :placeholder="props.placeholder" />
         </div>
     </slot>
 </template>
@@ -11,7 +12,15 @@ export type InputType = "button" | "checkbox" | "color" | "date" | "datetime-loc
 </script>
 
 <script setup lang="ts">
-const props = withDefaults(defineProps<{ type: InputType }>(), {
+import { useAttrs } from 'vue';
+import uniqueComponentId from '../utils/unique-component-id';
+
+const id = uniqueComponentId('tv_input_');
+const attrs = useAttrs();
+
+const props = withDefaults(defineProps<{ label: string, type: InputType, placeholder?: string }>(), {
+    placeholder: undefined,
+    label: "label",
     type: 'text'
 })
 </script>

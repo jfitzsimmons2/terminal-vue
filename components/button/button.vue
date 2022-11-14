@@ -37,6 +37,7 @@ const props = defineProps<{ icon?: string }>();
   user-select: none;
   position: relative;
   z-index: 1;
+  border-radius: $borderRadius;
 
   &:focus {
     @include focused();

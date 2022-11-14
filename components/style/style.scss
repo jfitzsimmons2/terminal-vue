@@ -17,8 +17,11 @@
   color: var(--invert-font-color);
 }
 
-body {
+html {
   font-size: var(--global-font-size);
+}
+
+body {
   color: var(--font-color);
   line-height: var(--global-line-height);
   margin: 0;
@@ -217,7 +220,12 @@ pre code {
   position: relative;
 }
 
+.terminal-card {
+  border-radius: $borderRadius;
+}
+
 .terminal-card > header {
+  border-radius: $borderRadius;
   padding: var(--global-space);
   display: flex;
   justify-content: space-between;
@@ -543,6 +551,7 @@ input[type="search"] {
   font-family: var(--font-stack);
   -webkit-appearance: none;
   border-radius: 0;
+
 }
 
 input[type="email"]:active,
@@ -555,9 +564,7 @@ input[type="text"]:focus,
 input[type="number"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus {
-  outline: none;
-  -webkit-appearance: none;
-  border: 1px solid var(--font-color);
+  @include focused();
 }
 
 input[type="text"]:not(:placeholder-shown):invalid,
@@ -618,7 +625,6 @@ select:-webkit-autofill:focus {
 
 .form-group {
   margin-bottom: var(--global-line-height);
-  overflow: auto;
 }
 
 // BUTTON

@@ -1,17 +1,17 @@
 @mixin focused {
-    outline: 2px dashed $focusColor; 
-    border-radius: 4px;
+    outline: 2px dashed var(--focus-color); 
+    border-radius: $borderRadius;
     outline-offset: 0;
 }
 
 @mixin focused-outer {
-    outline: 2px dashed $focusColor; 
-    border-radius: 4px;
+    outline: 2px dashed var(--focus-color); 
+    border-radius: $borderRadius;
     outline-offset: 2px;
 }
 
 @mixin focused-inner {
-    outline: 2px dashed $focusColor; 
-    border-radius: 4px;
+    outline: 2px dashed var(--focus-color); 
+    border-radius: $borderRadius;
     outline-offset: -1px;
 }

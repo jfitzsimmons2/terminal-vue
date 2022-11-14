@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { reactive } from "vue";
+import InputText from '../../components/input-text/input-text.vue';
 
 const state = reactive({
   logoText: "LogoText",
@@ -13,30 +14,13 @@ const state = reactive({
       <form action="#">
         <fieldset>
           <legend>Form legend</legend>
-          <div class="form-group">
-            <label for="email">Email input:</label>
-            <input id="email" name="email" type="email" required="false" minlength="5" placeholder="test" />
-          </div>
-          <div class="form-group">
-            <label for="text">Text input:</label>
-            <input id="text" name="text" type="text" required="false" minlength="5" placeholder="test" />
-          </div>
-          <div class="form-group">
-            <label for="itext">Invalid input (min-length 10):</label>
-            <input id="itext" name="itext" type="text" minlength="10" />
-          </div>
-          <div class="form-group">
-            <label for="pw">Password input:</label>
-            <input type="password" id="pw" name="pw" value="password" />
-          </div>
-          <div class="form-group">
-            <label for="radio">Radio input:</label>
-            <input name="radio" type="radio" id="radio" />
-          </div>
-          <div class="form-group">
-            <label for="check">Checkbox input:</label>
-            <input for="check" type="checkbox" id="check" />
-          </div>
+          <InputText label="Text input:" type="text"></InputText>
+          <InputText label="Invalid input (min-length 10):" required="false" type="text" minlength="10"
+            placeholder="Enter more than 10 chars" />
+          <InputText label="Password input:" required="true" type="password" placeholder="Password" />
+          <InputText label="Radio input:" type="radio" />
+          <InputText label="Checkbox input:" type="checkbox" />
+
           <div class="form-group">
             <label for="select">Select field:</label>
             <select id="select" name="select">

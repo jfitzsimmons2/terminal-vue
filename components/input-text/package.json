@@ -1,6 +1,6 @@
 {
-  "name": "blank",
-  "main": "dist/blank.cjs.js",
-  "module": "dist/blank.es.js",
-  "unpkg": "dist/blank.iife.js"
+  "name": "input-text",
+  "main": "dist/input-text.cjs.js",
+  "module": "dist/input-text.es.js",
+  "unpkg": "dist/input-text.iife.js"
 }

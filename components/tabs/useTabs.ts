@@ -1,14 +1,15 @@
 import { ref } from "vue";
+import { unrefElement } from "@vueuse/core";
 
 const useTabs = (tablist: HTMLElement) => {
-  const tablistNode = tablist;
+  const tablistNode = unrefElement(tablist);
 
   const tabs = ref<HTMLElement[]>([]);
 
   const firstTab = ref();
   const lastTab = ref();
 
-  tabs.value = Array.from(tablistNode.querySelectorAll("[role=tab]"));
+  tabs.value = Array.from(tablistNode?.querySelectorAll("[role=tab]")!);
   const tabpanels = ref<HTMLElement[]>([]);
 
   const setSelectedTab = (currentTab: EventTarget) => {
