@@ -67,8 +67,8 @@ console.log(tabs);
 }
 
 .tab-buttons button {
-  background-color: var(--font-color);
-  color: var(--invert-font-color);
+  background-color: var(--invert-font-color);
+  color: var(--font-color);
 }
 
 .tabs .terminal-card {
@@ -76,8 +76,8 @@ console.log(tabs);
 }
 
 .tab-buttons button.active {
-  background-color: var(--invert-font-color);
-  color: var(--font-color);
+  background-color: var(--font-color);
+  color: var(--invert-font-color);
 }
 
 .tab-buttons button:active,
