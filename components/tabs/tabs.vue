@@ -22,7 +22,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, useSlots } from "vue";
 import Button from "../button/button.vue";
-import { TabsManual } from "./TabsManual";
+import useTabs from "./useTabs";
 import componentID from "../utils/unique-component-id";
 
 const props = withDefaults(
@@ -42,7 +42,7 @@ const id = "tablist_" + componentID();
 console.log(id);
 
 onMounted(() => {
-  new TabsManual(tablist.value);
+  useTabs(tablist.value);
 });
 
 const slots = useSlots();
