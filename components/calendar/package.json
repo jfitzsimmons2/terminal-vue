@@ -1,0 +1,6 @@
+{
+  "name": "calendar",
+  "main": "dist/calendar.cjs.js",
+  "module": "dist/calendar.es.js",
+  "unpkg": "dist/calendar.iife.js"
+}

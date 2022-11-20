@@ -1,5 +1,5 @@
 {
-  "name": "@jfitzsimmons2/components",
+  "name": "terminalvue",
   "devDependencies": {
     "@iconify/vue": "^3.2.1",
     "glob": "^8.0.1",
