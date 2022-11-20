@@ -1,6 +1,6 @@
-@import "rootvars";
-@import "variables";
-@import "mixins";
+@import "@style/variables";
+@import "@style/rootvars";
+@import "@style/mixins";
 
 * {
   box-sizing: border-box;
@@ -551,7 +551,6 @@ input[type="search"] {
   font-family: var(--font-stack);
   -webkit-appearance: none;
   border-radius: 0;
-
 }
 
 input[type="email"]:active,
@@ -628,10 +627,9 @@ select:-webkit-autofill:focus {
 }
 
 // BUTTON
-[role='button']:focus {
+[role="button"]:focus {
   @include focused-outer();
 }
-
 
 .terminal-card {
   border: 1px solid var(--secondary-color);

@@ -1,15 +1,27 @@
 <template>
   <div class="tabs" role="tablist" ref="tablist">
     <div class="tab-buttons">
-      <Button v-for="(tab, i) in tabs" @click="$emit('update:modelValue', i)" :id="`tab${id}${i}`" class="btn-default"
-        :class="{ active: modelValue == i }" role="tab" aria-selected="true" :aria-controls="`tab-panel_${id}_${i}`">{{
-            tab.props?.heading
-        }}</Button>
+      <Button
+        v-for="(tab, i) in tabs"
+        @click="$emit('update:modelValue', i)"
+        :id="`tab${id}${i}`"
+        class="btn-default"
+        :class="{ active: modelValue == i }"
+        role="tab"
+        aria-selected="true"
+        :aria-controls="`tab-panel_${id}_${i}`"
+        >{{ tab.props?.heading }}</Button
+      >
     </div>
     <div class="tab-panels">
       <template v-for="(tab, i) of tabs" :key="`tab-panel_${id}_${i}`">
-        <div class="terminal-card" role="tabpanel" :aria-labelledby="`tab${id}${i}`" :id="`tab-panel_${id}_${i}`"
-          v-show="modelValue === i">
+        <div
+          class="terminal-card"
+          role="tabpanel"
+          :aria-labelledby="`tab${id}${i}`"
+          :id="`tab-panel_${id}_${i}`"
+          v-show="modelValue === i"
+        >
           <div>
             <component :is="tab"></component>
           </div>
@@ -50,8 +62,6 @@ const slots = useSlots();
 const tabs = computed(() => {
   return slots.default?.();
 });
-
-console.log(tabs);
 </script>
 
 <style lang="scss">

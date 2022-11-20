@@ -1,8 +1,7 @@
-<script lang="ts" setup>
-import { reactive, ref } from 'vue';
+<script setup lang="ts">
+import { reactive, ref } from "vue";
 
-const state = ref('terminal text')
-
+const state = ref("terminal text");
 </script>
 
 <template>
