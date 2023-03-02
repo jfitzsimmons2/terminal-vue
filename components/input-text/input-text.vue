@@ -50,16 +50,13 @@ const attrs = useAttrs();
 const emit = defineEmits(["update:modelValue"]);
 
 const handleInput = (e: Event) => {
-  changeModelValue(e.target?.value);
+  const target = e.target as HTMLInputElement;
+  changeModelValue(target.value);
 };
 
 const changeModelValue = (modelValue: string) => {
   emit("update:modelValue", modelValue);
 };
-
-const val = computed(() => {
-  return props.modelValue;
-});
 
 const props = withDefaults(
   defineProps<{
