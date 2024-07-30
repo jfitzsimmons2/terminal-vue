@@ -3,11 +3,12 @@
   "devDependencies": {
     "@iconify/vue": "^3.2.1",
     "glob": "^8.0.1",
-    "sass": "^1.51.0",
+    "sass": "^1.77.8",
     "vite": "^2.9.5",
     "vue": "^3.2.33"
   },
   "scripts": {
+    "build": "vite build",
     "css:build": "sass style/style.scss style/dist/style.css --style=compressed",
     "css:watch": "sass style/style.scss style/dist/style.css --style=compressed --watch"
   },

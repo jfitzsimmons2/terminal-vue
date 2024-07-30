@@ -1,6 +1,0 @@
-{
-  "name": "input-text",
-  "main": "dist/input-text.cjs.js",
-  "module": "dist/input-text.es.js",
-  "unpkg": "dist/input-text.iife.js"
-}

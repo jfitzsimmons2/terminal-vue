@@ -15,7 +15,7 @@ glob('./**/package.json', { ignore: ["./node_modules/**/package.json"]}, functio
     
     const name = require(file).name;
     console.log(name);
-    if (name !== 'components') {
+    if (name !== 'terminalvue') {
       
        build({
           build: {

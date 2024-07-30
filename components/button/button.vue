@@ -1,7 +1,7 @@
 <template>
   <button class="btn">
     <Icon style="margin-right: 0.5rem" v-if="props.icon" :icon="props.icon" />
-    <slot></slot>
+    <slot>{{ props.label }}</slot>
   </button>
 </template>
 
@@ -14,7 +14,7 @@ export default {
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
 
-const props = defineProps<{ icon?: string }>();
+const props = defineProps<{ icon?: string, label?: string }>();
 </script>
 
 <style lang="scss">
@@ -37,11 +37,7 @@ const props = defineProps<{ icon?: string }>();
   user-select: none;
   position: relative;
   z-index: 1;
-  border-radius: $borderRadius;
-
-  &:focus {
-    @include focused();
-  }
+  border-radius: 3px;
 }
 
 .btn:active {
